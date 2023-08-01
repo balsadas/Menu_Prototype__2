@@ -9057,24 +9057,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ BackButton)
 /* harmony export */ });
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Context */ "./resources/js/src/Context.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 function BackButton(_ref) {
   var _ref$width = _ref.width,
     width = _ref$width === void 0 ? 24 : _ref$width,
     _ref$height = _ref.height,
-    height = _ref$height === void 0 ? 24 : _ref$height,
-    _ref$color = _ref.color,
-    color = _ref$color === void 0 ? "#1E376C" : _ref$color;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("svg", {
+    height = _ref$height === void 0 ? 24 : _ref$height;
+  var _useAppContext = (0,_Context__WEBPACK_IMPORTED_MODULE_0__.useAppContext)(),
+    state = _useAppContext.state;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
     width: width,
     height: height,
     viewBox: "0 0 24 24",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("path", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
       d: "M15 18L9 12L15 6",
-      stroke: color,
+      stroke: state.mode == 'dark' ? '#fff' : '#000',
       strokeWidth: "1.5",
       strokeLinecap: "round",
       strokeLinejoin: "round"
@@ -10222,9 +10224,9 @@ function PopupView(_ref) {
         className: "item-info",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "p-container",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             className: "fooddescription",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
               className: "pop-up-text p-h-semibold",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
                 children: name[lang]
@@ -10239,11 +10241,38 @@ function PopupView(_ref) {
                   }, index + "_ingredients");
                 })
               }) : null]
-            })
+            }), size.discount_price && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              className: "p-sale",
+              style: {
+                marginTop: 10
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "percentage",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                  className: "text02 p-b-medium",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+                    children: [discount, "%"]
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "saleprice",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                  className: "text04 p-b-medium",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+                    style: {
+                      whiteSpace: "nowrap",
+                      textDecoration: "line-through",
+                      textDecorationColor: "red"
+                    },
+                    children: [size.price, " ", _common__WEBPACK_IMPORTED_MODULE_0__.Constants.currency]
+                  })
+                })
+              })]
+            })]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
+        }), (size.discount_price ? size.discount_price : size.price) > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("span", {
           children: [size.discount_price ? size.discount_price : size.price, _common__WEBPACK_IMPORTED_MODULE_0__.Constants.currency]
-        })]
+        }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {})]
       })]
     })]
   });
@@ -10274,6 +10303,7 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0); } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i["return"] && (_r = _i["return"](), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -10316,7 +10346,30 @@ function Card(_ref) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
             className: "inner-frame",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-              className: "sale"
+              className: "sale",
+              children: size.discount_price && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                  className: "percentage",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                    className: "text b-medium",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+                      children: [discount, "%"]
+                    })
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+                  className: "saleprice",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+                    className: "text01 b-medium",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("span", {
+                      children: [size.price, _common__WEBPACK_IMPORTED_MODULE_0__.Constants.currency]
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+                    src: "/images/vector1.svg",
+                    alt: "Vector1I1997",
+                    className: "vector1"
+                  })]
+                })]
+              })
             }), (size.discount_price ? size.discount_price : size.price) > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
               className: "price",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
@@ -12403,9 +12456,7 @@ function Navbar(_ref) {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
         to: _common_Constants__WEBPACK_IMPORTED_MODULE_2__["default"]._catalog,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_assets_icons_BackButton__WEBPACK_IMPORTED_MODULE_0__["default"], {
-          color: "currentColor"
-        })
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_assets_icons_BackButton__WEBPACK_IMPORTED_MODULE_0__["default"], {})
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
         id: "navHolder",
         children: Array.isArray(catalog) && catalog.map(function (c) {
@@ -12631,7 +12682,8 @@ function Content() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
         style: {
           userSelect: 'none',
-          paddingTop: '50px'
+          paddingTop: '50px',
+          color: '#fff'
         },
         children: _common__WEBPACK_IMPORTED_MODULE_0__.Locales[state.lang].appName
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_assets_icons_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -12640,6 +12692,9 @@ function Content() {
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
       className: "lang-content",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h4", {
+        style: {
+          color: '#fff'
+        },
         children: _common__WEBPACK_IMPORTED_MODULE_0__.Locales[state.lang].ChooseLanguage
       }), _common__WEBPACK_IMPORTED_MODULE_0__.Constants.appLocales.map(function (lang) {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
@@ -17308,7 +17363,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --background-color: #FFFFFF;\n  --text-color:#E79626;\n  --primary: #fff;\n  --primary_1: #E79626;\n  --stroke-color: #E4E4E4;\n  --secondary-color: #E79626;\n  --white-text-color: #FCFCFC;\n  --gray: #000;\n  --gray_1: #fff;\n  --black: #1C1C1C;\n  --passive-text-color: #E3E3E3;\n  --footer-bg:  rgba(231, 150, 38, 0.24);\n  --text-color-2: #E79626;\n  --background-color_1 : linear-gradient(42deg, #E79626 0%, #DC4A00 100%)\n  \n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: \"Inter\", sans-serif !important;\n  background-color: var(--background-color);\n  color: var(--text-color);\n}\n\nbody.dark-mode {\n  --text-color:  #fff;\n  --background-color:#1C1C1C;\n  --gray: #1C1C1C;\n  --gray_1: #1C1C1C;\n  --passive-text-color: #515151;\n  --footer-bg: rgba(28, 28, 28, 0.24);\n  --text-color-2: #FCFCFC;\n  --background-color_1 : #1C1C1C;\n  --primary: #EDB032;\n  --primary_1: #EDB032;\n  --secondary-color: #EDB032\n}\n\nbody>div {\n  max-width: 767px;\n  margin: 0px auto;\n}\n\n* {\n  box-sizing: border-box;\n  -ms-overflow-style: none;\n  /* IE and Edge */\n  scrollbar-width: none;\n  /* Firefox */\n}\n\n/* hide scrollbar for Chrome*/\n*::-webkit-scrollbar {\n  display: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ":root {\n  --background-color: #FFFFFF;\n  --text-color:#E79626;\n  --primary: #fff;\n  --primary_1: #E79626;\n  --stroke-color: #E4E4E4;\n  --secondary-color: #E79626;\n  --white-text-color: #FCFCFC;\n  --gray: #000;\n  --gray_1: #fff;\n  --black: #1C1C1C;\n  --passive-text-color: #E3E3E3;\n  --footer-bg:  rgba(231, 150, 38, 0.24);\n  --text-color-2: #000;\n  --background-color_1 : linear-gradient(42deg, #E79626 0%, #DC4A00 100%)\n  \n}\n\nbody {\n  margin: 0;\n  padding: 0;\n  font-family: \"Inter\", sans-serif !important;\n  background-color: var(--background-color);\n  color: var(--text-color);\n}\n\nbody.dark-mode {\n  --text-color:  #fff;\n  --background-color:#1C1C1C;\n  --gray: #1C1C1C;\n  --gray_1: #1C1C1C;\n  --passive-text-color: #515151;\n  --footer-bg: rgba(28, 28, 28, 0.24);\n  --text-color-2: #FCFCFC;\n  --background-color_1 : #1C1C1C;\n  --primary: #EDB032;\n  --primary_1: #EDB032;\n  --secondary-color: #EDB032\n}\n\nbody>div {\n  max-width: 767px;\n  margin: 0px auto;\n}\n\n* {\n  box-sizing: border-box;\n  -ms-overflow-style: none;\n  /* IE and Edge */\n  scrollbar-width: none;\n  /* Firefox */\n}\n\n/* hide scrollbar for Chrome*/\n*::-webkit-scrollbar {\n  display: none;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

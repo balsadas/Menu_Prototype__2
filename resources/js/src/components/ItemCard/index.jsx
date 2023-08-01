@@ -18,7 +18,7 @@ export default function Card({ image, discount, sizes, name, lang, popupImage, i
           <div className="food-description">
             <div className="inner-frame">
               <div className="sale">
-                {/*{
+                {
                   size.discount_price && (
                     <>
                       <div className="percentage">
@@ -38,7 +38,7 @@ export default function Card({ image, discount, sizes, name, lang, popupImage, i
                       </div>
                     </>
                   )
-                }*/}
+                }
               </div>
               {
                 (size.discount_price ? size.discount_price : size.price) > 0 ? (

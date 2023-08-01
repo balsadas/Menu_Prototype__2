@@ -10,7 +10,7 @@ function Navbar({ lang, catalog }) {
     <div className="c-navbar">
       <div>
         <Link to={Constants._catalog}>
-          <BackButton color="currentColor" />
+          <BackButton   />
         </Link>
         <div id="navHolder">
           {Array.isArray(catalog) &&

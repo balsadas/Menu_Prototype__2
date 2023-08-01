@@ -9,7 +9,7 @@ return [
         'tm'          => ['name' => 'Türkmen',                'script' => 'Cyrl', 'native' => 'Türkmen', 'regional' => 'tk_TM'],
         'ru'          => ['name' => 'Russian',                'script' => 'Cyrl', 'native' => 'Русский', 'regional' => 'ru_RU'],
         'en'          => ['name' => 'English',                'script' => 'Latn', 'native' => 'English', 'regional' => 'en_GB'],
-        'tr'          => ['name' => 'Turkish',                'script' => 'Latn', 'native' => 'Türk', 'regional' => 'tr_TR'],
+        // 'tr'          => ['name' => 'Turkish',                'script' => 'Latn', 'native' => 'Türk', 'regional' => 'tr_TR'],
         //'ace'         => ['name' => 'Achinese',               'script' => 'Latn', 'native' => 'Aceh', 'regional' => ''],
         //'af'          => ['name' => 'Afrikaans',              'script' => 'Latn', 'native' => 'Afrikaans', 'regional' => 'af_ZA'],
         //'agq'         => ['name' => 'Aghem',                  'script' => 'Latn', 'native' => 'Aghem', 'regional' => ''],

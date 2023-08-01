@@ -1,8 +1,13 @@
+import { useAppContext } from "../../Context";
+
 export default function BackButton({
   width = 24,
   height = 24,
-  color = "#1E376C",
-}) {
+  
+})
+
+ {
+  const {state} = useAppContext()
   return (
     <svg
       width={width}
@@ -13,7 +18,7 @@ export default function BackButton({
     >
       <path
         d="M15 18L9 12L15 6"
-        stroke={color}
+        stroke= {state.mode == 'dark' ? '#fff' :'#000'}
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

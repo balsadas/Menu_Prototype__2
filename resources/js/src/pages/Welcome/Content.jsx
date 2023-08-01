@@ -14,11 +14,11 @@ function Content() {
   return (
     <div className="main-content" >
       <center>
-        <h1 style={{userSelect:'none', paddingTop:'50px', }}>{Locales[state.lang].appName}</h1>
+        <h1 style={{userSelect:'none', paddingTop:'50px',color: '#fff' }}>{Locales[state.lang].appName}</h1>
         <Logo color={"currentColor"} />
       </center>
       <div className="lang-content">
-        <h4>{Locales[state.lang].ChooseLanguage}</h4>
+        <h4 style={{color:'#fff'}}>{Locales[state.lang].ChooseLanguage}</h4>
         {Constants.appLocales.map((lang) => (
           <button
             key={lang}

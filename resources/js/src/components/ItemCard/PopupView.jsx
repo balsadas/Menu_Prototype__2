@@ -53,7 +53,7 @@ export default function PopupView({
                                     </ul>
                                 ) : null}
                             </span>
-                            {/*{size.discount_price && (
+                            {size.discount_price && (
                                 <div
                                     className="p-sale"
                                     style={{ marginTop: 10 }}
@@ -79,16 +79,18 @@ export default function PopupView({
                                         </span>
                                     </div>
                                 </div>
-                                            )}*/}
+                                            )}
                         </div>
                     </div>
-                    
+                    {(size.discount_price ? size.discount_price : size.price) >
+                    0 ? (
                         <span >
                             {size.discount_price ? size.discount_price : size.price}
                             {Constants.currency}
                         </span>
-              
-                  
+                    ) : (
+                        <span />
+                    )}
                 </div>
             </div>
         </>
