@@ -1,0 +1,10 @@
+.contact{
+    justify-content: center;
+    display: flex;
+   
+}
+
+.dark-mode {
+    justify-items: center;
+    color: 'white';
+}

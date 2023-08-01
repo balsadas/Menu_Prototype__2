@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body{
+    height: 100%;width: 100%;
+    margin: 0;padding: 0;
+    font-family: 'inter',sans-serif;
+}
+
+* {
+   -webkit-user-select: none; /* Safari */
+   -ms-user-select: none; /* IE 10 and IE 11 */
+   user-select: none; /* Standard syntax */
+
+}
+
+.card {
+    @apply relative w-[90%] h-[190px] rounded-[15px]  bg-no-repeat bg-cover my-2;
+}
+
+.img{
+    @apply absolute w-[100%] h-[190px] z-10;
+}
+
+.gradient{
+    @apply absolute z-20 w-[100%] h-[190px] rounded-[15px]  top-0 left-0;
+    background: linear-gradient(283.05deg, rgba(0, 0, 0, 0.1) 1.28%, rgba(0, 0, 0, 0.55) 98.41%);
+}
+
+.menuNames{
+    @apply text-white text-[30px] absolute z-30 px-6  w-[100%];
+}
+
+.BackdropFilter{
+    -webkit-backdrop-filter: blur(20px);
+    -o-backdrop-filter: blur(20px);
+    -ms-backdrop-filter: blur(20px);
+    -moz-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.overflow-y{
+    -webkit-overflow-y: auto;
+    -o-overflow-y: auto;
+    -moz-overflow-y: auto;
+    -ms-overflow-y: auto;
+    overflow-y: auto;
+}
+
+.overflow-x{
+    -webkit-overflow-x: auto;
+    -o-overflow-x: auto;
+    -moz-overflow-x: auto;
+    -ms-overflow-x: auto;
+    overflow-x: auto;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#gradient{
+    background-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.0001));
+}
+
+#gradient_name{
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.05));
+}
+
+.accordion_content{
+    overflow: hidden;
+    height: 0;
+    transition: All 1s ease-out;
+}
+
+.active{
+    padding-bottom: 6px;
+}
+
+.ahref{
+    @apply flex flex-col justify-center items-center  w-full h-auto ;
+
+}
+
+.langBg{
+    @apply flex flex-col justify-center items-center gap-[16px];
+}
+
+.bord{
+    @apply border-b-[1.2px] smd:border-b-[1.4px] border-b-[#F0C272] px-4;
+}
+
+.TLWstyle{
+    @apply flex flex-row justify-center items-center text-center rounded-[4px] w-[160px] h-[38px] ssm:w-[178px] ssm:h-[40px]  smd:w-[190px] smd:h-[42px];
+}
+
+.TLWstyle:last-child{
+    @apply border-none;
+}
+
+.categories{
+    @apply border-[0.5px] slg:border-[2px] w-full text-[14px] ssm:text-[16px] smd:text-[18px] py-[8px] ssm:py-[10px] smd:py-[12px] mb-2 smd:mb-[10px] text-center rounded-lg;
+    background: rgba(24, 12, 0, 0.6);
+}
+
+.passiveCategory{
+    @apply border-[1.4px] border-[#E4E4E4] text-[#800080];
+}
+
+.activeCategory{
+    @apply bg-[#800080] text-[#fff] font-[400px] border-none;
+}
+
+.popup-image{
+    @apply fixed top-0 left-0 h-full w-full z-50 hidden ;
+	background: rgba(0, 0, 0, .8);
+}
+
+.textOverflow{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.textOverflowFood{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* white-space: pre-wrap; */
+}
+
+/* surat olcegleri */
+.sizesOfImages{
+    @apply w-[120px] h-[120px] ssm:w-[124px] ssm:h-[124px] smd:w-[150px] smd:h-[150px] slg:w-[172px] slg:h-[172px];
+}
+
+.sizesOfTextContainer{
+    @apply w-[110px] ssm:w-[116px] smd:w-[140px] slg:w-[168px];
+}
+
+.image-container:last-child{
+    float: left;
+}

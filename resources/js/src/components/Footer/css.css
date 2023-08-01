@@ -1,0 +1,18 @@
+.powered {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: var(--footer-bg);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    height: 48px;
+    line-height: 48px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -0.02em;
+    color: #fff;
+    user-select: none;
+}

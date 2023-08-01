@@ -1,0 +1,62 @@
+:root {
+  --background-color: #FFFFFF;
+  --text-color:#E79626;
+  --primary: #fff;
+  --primary_1: #E79626;
+  --stroke-color: #E4E4E4;
+  --secondary-color: #E79626;
+  --white-text-color: #FCFCFC;
+  --gray: #000;
+  --gray_1: #fff;
+  --black: #1C1C1C;
+  --passive-text-color: #E3E3E3;
+  --footer-bg:  rgba(231, 150, 38, 0.24);
+  --text-color-2: #E79626;
+  --background-color_1 : linear-gradient(42deg, #E79626 0%, #DC4A00 100%)
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif !important;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  --text-color:  #fff;
+  --background-color:#1C1C1C;
+  --gray: #1C1C1C;
+  --gray_1: #1C1C1C;
+  --passive-text-color: #515151;
+  --footer-bg: rgba(28, 28, 28, 0.24);
+  --text-color-2: #FCFCFC;
+  --background-color_1 : #1C1C1C;
+  --primary: #EDB032;
+  --primary_1: #EDB032;
+  --secondary-color: #EDB032
+}
+
+body>div {
+  max-width: 767px;
+  margin: 0px auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+* {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* hide scrollbar for Chrome*/
+*::-webkit-scrollbar {
+  display: none;
+}
