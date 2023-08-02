@@ -12,7 +12,7 @@
     color: var(--text-color);
 }
 
-.w-wrapper>.main-content {
+.w-wrapper>.main_1 {
     flex: 1;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -32,10 +32,20 @@
     object-fit: contain;
 }
 .main-content{
-    background: var(--background-color_1)
+    background: var(--background-color_1);background-repeat: no-repeat;
+    background-image: url('./novada_1.png');
+    background-position-x: right;
+    background-size: auto;
+}
+.main_1{
+    background-image: url('./novada_2.png');
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+   background-size: auto;
 }
 
-.main-content h1 {
+.main_1 h1 {
     text-align: center;
     margin: 0 0 23px;
     padding: 0;
@@ -47,7 +57,7 @@
     color: var(--text-color);
 }
 
-.main-content>.lang-content {
+.main_1>.lang-content {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;

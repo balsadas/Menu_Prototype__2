@@ -13,7 +13,7 @@ function Navbar({ lang }) {
         <Link to={Constants._welcome}>
           <BackButton color="currentColor" />
         </Link>
-        <h4 style={{color: state.mode == 'dark' ? '#EDB032' : '#000'}}>{Locales[lang].Categories}</h4>
+        <h4 style={{color: state.mode == 'dark' ? '#fff' : '#000'}}>{Locales[lang].Categories}</h4>
         <span />
       </div>
     </div>

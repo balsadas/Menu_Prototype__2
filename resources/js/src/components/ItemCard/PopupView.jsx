@@ -55,7 +55,7 @@ export default function PopupView({
                             </span>
                             {size.discount_price && (
                                 <div
-                                    className="p-sale"
+                                    className="p-sale" 
                                     style={{ marginTop: 10 }}
                                 >
                                     <div className="percentage">

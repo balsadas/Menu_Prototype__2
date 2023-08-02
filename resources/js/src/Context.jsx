@@ -16,7 +16,7 @@ const initialState = {
 
 
 if (!Constants.appLocales.includes(initialState.lang)){
-  initialState.lang = "en";
+  initialState.lang = "tm";
 }
 
 

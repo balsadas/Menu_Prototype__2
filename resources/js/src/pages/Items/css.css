@@ -80,10 +80,11 @@
 .item-list {
     display: -ms-grid;
     display: -moz-grid;
-    display: grid;
-    grid-template-columns: calc( 50% - 10px ) calc( 50% - 10px );
+    /* display: grid;
+    grid-template-columns: calc( 50% - 10px ) calc( 50% - 10px ); */
     gap: 20px;
-    padding: 10px 16px;
+    padding: 20px 16px;
+    margin-top: 50px;
 }
 
 /* item list here  */

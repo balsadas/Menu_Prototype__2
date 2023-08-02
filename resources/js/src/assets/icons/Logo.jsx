@@ -1,8 +1,11 @@
-import img_1 from '../images/iyermenje.png'
+import { useAppContext } from '../../Context';
+import img_1 from '../images/novada.png'
+import img_2 from '../images/novada1.png'
 
 export default function Logo({ width = '255px', height = '289px' }) {
+  const {state} = useAppContext()
   return (
-    <img src={img_1} style={{width:{width},height:{height}}}/>
+    <img src={state.mode == 'dark' ? img_2 : img_1} style={{width:{width},height:{height}}}/>
     // <svg
     //   width={width}
     //   height={height}

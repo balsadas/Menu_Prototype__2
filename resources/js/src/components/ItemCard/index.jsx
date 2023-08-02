@@ -10,6 +10,7 @@ export default function Card({ image, discount, sizes, name, lang, popupImage, i
   const {state} = useAppContext()
   const size = sizes[0];
   console.log(size)
+  if (size.discount_price === 'null') size.discount_price = null
   return (
     <div className="item-card">
       <img onClick={() => setOpen(true)} src={image} alt="SS" />

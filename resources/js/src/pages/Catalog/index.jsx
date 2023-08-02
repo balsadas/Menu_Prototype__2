@@ -16,9 +16,9 @@ function Catalog() {
         setCategories(res.data)
       }
     })
-  }, []);
+  }, [])
   return (
-    <div>
+    <div >
       <div className="items">
         {
           categories.map(category =>  <Card key={category.id} lang={state.lang} {...category} />)

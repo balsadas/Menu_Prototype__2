@@ -9,7 +9,13 @@ import { Locales } from "../../common";
 function ContactUs() {
     const { state } = useAppContext();
     return (
-        <div style={{ marginBottom: "50px", textAlign: "center",paddingBottom: '50px' }}>
+        <div
+            style={{
+                marginBottom: "50px",
+                textAlign: "center",
+                paddingBottom: "50px",
+            }}
+        >
             <Marquee title={Locales[state.lang].Contact} />
             <div className="contact">
                 <div>
@@ -17,7 +23,43 @@ function ContactUs() {
                         <h2
                             style={{
                                 color:
-                                    state.mode == "dark" ? "#fff" : "#515151",
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(56, 77, 66)",
+                                fontSize: "18px",
+                                textTransform: "uppercase",
+                                display: "flex",
+                                justifyContent: "center",
+                            }}
+                        >
+                            {Locales[state.lang].Address}
+                        </h2>
+                        <a
+                            href={"ins:" + Constants.Ins_ti}
+                            style={{
+                                display: "flex",
+                                justifyContent: "center",
+                                textDecoration: "none",
+                                fontSize: "28px",
+                                color:
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(81, 81, 81)",
+                                paddingTop: "2px",
+                                boxSizing: "border-box",
+                            }}
+                        >
+                            {Constants.Ins_ti}
+                        </a>
+                    </div>
+
+                    <div style={{ marginTop: "2.5rem" }}>
+                        <h2
+                            style={{
+                                color:
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(56, 77, 66)",
                                 fontSize: "18px",
                                 textTransform: "uppercase",
                                 display: "flex",
@@ -33,7 +75,10 @@ function ContactUs() {
                                 justifyContent: "center",
                                 textDecoration: "none",
                                 fontSize: "28px",
-                                color: "#fff",
+                                color:
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(81, 81, 81)",
                                 paddingTop: "2px",
                                 boxSizing: "border-box",
                             }}
@@ -47,7 +92,10 @@ function ContactUs() {
                                 justifyContent: "center",
                                 textDecoration: "none",
                                 fontSize: "28px",
-                                color: "#fff",
+                                color:
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(81, 81, 81)",
                                 paddingTop: "2px",
                                 boxSizing: "border-box",
                             }}
@@ -61,7 +109,10 @@ function ContactUs() {
                                 justifyContent: "center",
                                 textDecoration: "none",
                                 fontSize: "28px",
-                                color: "#fff",
+                                color:
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(81, 81, 81)",
                                 paddingTop: "2px",
                                 boxSizing: "border-box",
                             }}
@@ -73,7 +124,9 @@ function ContactUs() {
                         <h2
                             style={{
                                 color:
-                                    state.mode == "dark" ? "#fff" : "#515151",
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(56, 77, 66)",
                                 fontSize: "18px",
                                 textTransform: "uppercase",
                                 display: "flex",
@@ -87,7 +140,10 @@ function ContactUs() {
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
-                                color: "#fff",
+                                color:
+                                    state.mode == "dark"
+                                        ? "#fff"
+                                        : "rgb(81, 81, 81)",
                             }}
                         >
                             {Locales[state.lang].Address_1}

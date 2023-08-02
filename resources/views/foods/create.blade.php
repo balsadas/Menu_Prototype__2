@@ -99,8 +99,8 @@
             </div>
 
             <div class="col-md-12">
-                {{-- <h6 class="heading my-3">@lang('main.prices')</h6> --}}
-                {{-- <ul class="nav nav-tabs" id="priceTab" role="tablist">
+                <h6 class="heading my-3">@lang('main.prices')</h6>
+                <ul class="nav nav-tabs" id="priceTab" role="tablist">
                     @foreach ($tabs as $key => $tab)
                         <li class="nav-item">
                             <a class="nav-link {{ $key == 'single' ? 'active' : '' }}" id="{{ $key }}-tab"
@@ -108,15 +108,15 @@
                                 aria-selected="{{ $key == 'single' ? 'true' : 'false' }}">{{ $tab['name'] }}</a>
                         </li>
                     @endforeach
-                </ul> --}}
+                </ul>
                 <div class="tab-content mb-36" id="priceTabContent">
                     @foreach ($tabs as $key => $tab)
                         <div class="tab-pane fade {{ $key == 'single' ? 'show active' : '' }}" id="{{ $key }}"
                             role="tabpanel" aria-labelledby="{{ $key }}-tab">
-                            {{-- @for ($i = 1; $i <= $tab['loop_count']; $i++) --}}
+                            @for ($i = 1; $i <= $tab['loop_count']; $i++)
                                 <div class="card card-bordered mb-2">
                                     <div class="card-inner">
-                                        {{-- <h5 class="float-title">@lang('main.price') {{ $i }}</h5> --}}
+                                        <h5 class="float-title">@lang('main.price') {{ $i }}</h5>
                                         <h5 class="float-title">@lang('main.price')</h5>
                                         @if ($tab['loop_count'] != 1)
                                             <div class="form-group">
@@ -157,7 +157,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            {{-- @endfor --}}
+                            @endfor
                         </div>
                     @endforeach
                 </div>
